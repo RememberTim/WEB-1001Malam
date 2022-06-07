@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,4 @@ Route::middleware('auth:sanctum')->group(function(){
 
 Route::post('login',[UserController::class, 'login']);
 Route::post('register',[UserController::class, 'register']);
-Route::get('/products', 'App\Http\Controllers\API\ProductController@all');
+Route::get('products', [ProductController::class, 'all']);
