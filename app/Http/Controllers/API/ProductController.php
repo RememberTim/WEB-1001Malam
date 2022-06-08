@@ -18,8 +18,7 @@ class ProductController extends Controller
         $limit = $request->input('limit', 6);
         // name digunakan untuk mengambil data berdasarkan nama
         $name = $request->input('name');
-        // slug digunakan untuk mengambil data berdasarkan slug
-        $slug = $request->input('slug');
+        
         // type digunakan untuk mengambil data berdasarkan type
         $type = $request->input('type');
         // price_from digunakan untuk mengambil data berdasarkan harga dari

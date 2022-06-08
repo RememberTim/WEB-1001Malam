@@ -29,7 +29,11 @@ class ProductRequest extends FormRequest
             'deskripsi' => 'required|string',
             'bahan' => 'required|string|max:255',
             'harga' => 'required|integer',
-            'stok' => 'required|integer'
+            'stok' => 'required|integer',
+            'rating' => 'required',
+            'keuntungan' => 'required|integer',
+            
+
         ];
     }
 }
