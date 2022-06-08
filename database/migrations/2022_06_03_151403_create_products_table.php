@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('harga');
             $table->integer('stok');
             $table->integer('keuntungan');
+            $table->double('rating');
 
             $table->softDeletes();
             $table->timestamps();;

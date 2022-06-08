@@ -17,6 +17,7 @@ class Product extends Model
         'harga',
         'keuntungan',
         'stok',
+        'rating',
     ];
 
     protected $hidden = [

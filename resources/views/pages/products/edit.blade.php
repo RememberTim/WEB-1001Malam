@@ -67,6 +67,15 @@
                 class="form-control @error('stok') is-invalid @enderror"/>
                 @error('stok')<div class ="text-muted">{{ $message }}</div>   @enderror 
         </div>
+
+        <div class="form-group">
+            <label for="rating" class="form-control-label"> Rating </label>
+            <input type="double"
+                name="rating"
+                value= "{{ old('rating') ? old('rating') : $item->rating }}"
+                class="form-control @error('rating') is-invalid @enderror"/>
+                @error('rating')<div class ="text-muted">{{ $message }}</div>   @enderror 
+        </div>
         <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">
                 Ubah 
