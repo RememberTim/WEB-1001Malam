@@ -21,10 +21,10 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $income = Transaction::where('transaction_status', 'BERHASIL')->sum('transaction_total');
-        $income1 = Transaction::where('transaction_status', 'BERHASIL')->sum('total_keuntungan');
+        $income = Transaction::where('transaction_status', 'SELESAI')->sum('transaction_total');
+        $income1 = Transaction::where('transaction_status', 'SELESAI')->sum('total_keuntungan');
 
-        $sales = Transaction::where('transaction_status', 'BERHASIL')->count();
+        $sales = Transaction::where('transaction_status', 'SELESAI')->count();
         $sales1 = Transaction::where('transaction_status', 'MASUK')->count();
         $items = Transaction::orderBy('id', 'desc')->take(5)->get();
 

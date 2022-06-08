@@ -33,7 +33,7 @@
                                     <td>
                                       @if ($item->transaction_status == 'MASUK')
                                         <span class="badge badge-info">
-                                        @elseif ($item->transaction_status == 'KONFIRMASI')
+                                        @elseif ($item->transaction_status == 'TERIMA')
                                         <span class="badge badge-warning">
                                         @elseif ($item->transaction_status == 'SELESAI')
                                         <span class="badge badge-success">

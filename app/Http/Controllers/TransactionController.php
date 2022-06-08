@@ -118,7 +118,7 @@ class TransactionController extends Controller
     public function setStatus(Request $request, $id)
     {
        $request->validate([
-            'status' => 'required|in:MASUK,KONFIRMASI,SELESAI,BATAL',
+            'status' => 'required|in:MASUK,TERIMA,SELESAI,BATAL',
         ]);
 
         $item = Transaction::findOrFail($id);
