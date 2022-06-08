@@ -17,10 +17,9 @@ class ProductController extends Controller
         // limit digunakan untuk membatasi jumlah data yang akan ditampilkan
         $limit = $request->input('limit', 6);
         // name digunakan untuk mengambil data berdasarkan nama
-        $name = $request->input('name');
-        
+        $nama = $request->input('nama'); 
         // type digunakan untuk mengambil data berdasarkan type
-        $type = $request->input('type');
+        $tipe = $request->input('tipe');
         // price_from digunakan untuk mengambil data berdasarkan harga dari
         $price_from = $request->input('price_from');
         // price_to digunakan untuk mengambil data berdasarkan harga sampai
@@ -43,11 +42,11 @@ class ProductController extends Controller
 
         $product = Product ::with ('galleries');
 
-        if ($name)
-            $product->where('name', 'like', '%' . $name . '%');
+        if ($nama)
+            $product->where('name', 'like', '%' . $nama . '%');
 
-            if ($type)
-            $product->where('type', 'like', '%' . $name . '%');     
+            if ($tipe)
+            $product->where('type', 'like', '%' . $nama . '%');     
 
         if($price_from)
             $product->where('price', '>=', $price_from);

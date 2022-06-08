@@ -12,7 +12,7 @@ class TransactionController extends Controller
 {
     public function get(Request $request, $id)
     {
-        $product = Transaction::with(['users.details.product'])->find($id);
+        $product = Transaction::with(['details.product'])->find($id);
 
         if ($product) 
            return ResponseFormatter::success($product,'Transaksi berhasil diambil');
